@@ -425,7 +425,7 @@ function drawSecondScene(){
         textSize(30);
         text('Press "a" to Accept Call', windowWidth - 529, 200);
         if(keyIsPressed && key == 'a'){
-          ringring.pause();
+          ringtone.pause();
           timer -= 1
         } 
       }
@@ -448,7 +448,7 @@ function drawSecondScene(){
         keyboard.play();
 
       if (frameCount % 60 == 0 && timer == 75)
-      ringring.play();
+      ringtone.play();
 
       if(timer <= 68 && timer >= 65){
         textSize(30);
@@ -463,7 +463,7 @@ function drawSecondScene(){
 
     // Scene 2 Shot 3
     if(timer < 65 && timer >= 50){
-        ringring.pause();
+        ringtone.pause();
         keyboard.pause();
 
         if(timer < 65 && timer >= 62){
