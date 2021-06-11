@@ -21,12 +21,12 @@ function preload() {
 
   // shot music
   openingMusic = loadSound('./assets/music/opening.mp3');
-  musicFestival = loadSound('./assets/music/musicFestival.mp3');
   recall = loadSound('./assets/music/recall.mp3');
 
   // shot sounds
-  shot3_music = loadSound('./assets/sounds/noise.mp3');
-  shot4_music = loadSound('./assets/sounds/goodbye.mp3');
+  shot3_music = loadSound('./assets/sounds/no-sound.wav');
+  shot4_music = loadSound('./assets/sounds/no-sound.wav');
+  musicFestival = loadSound('./assets/sounds/no-sound.wav');
   festival = loadSound('./assets/sounds/festival.mp3');
   keyboard = loadSound('./assets/sounds/keyboard.wav');
   ringtone = loadSound('./assets/sounds/ringtone.mp3');
@@ -337,7 +337,8 @@ function drawFirstScene(){
       openingMusic.pause();
       dispute.animate();
       dispute.show();
-      if(frameCount % 60 == 0 && timer == 145) shot3_music.play();
+      if(frameCount % 60 == 0 && timer == 145) 
+        // shot3_music.play();
       if(frameCount % 60 == 0)
       timer-=1; 
     }
@@ -387,7 +388,7 @@ function drawFirstScene(){
 
       if(timer <= 106 && timer > 99){
         if (frameCount % 60 == 0 && timer == 105){
-          shot4_music.play();
+          // shot4_music.play();
         }
         depart_4.animate();
         depart_4.show();
@@ -432,7 +433,7 @@ function drawSecondScene(){
 
       if(timer < 85 && timer >= 78){
         if (frameCount % 60 == 0 && timer == 84)
-        musicFestival.play();
+        // musicFestival.play();
         festival.setVolume(0.3);
         musicfes_3.animate();
         musicfes_3.show(); 
@@ -443,7 +444,7 @@ function drawSecondScene(){
     //Scene 2 Shot 2
     if(timer < 78 && timer >= 65){
         festival.pause();
-        musicFestival.pause();
+        // musicFestival.pause();
       if (frameCount % 60 == 0 && timer == 77)
         keyboard.play();
 
